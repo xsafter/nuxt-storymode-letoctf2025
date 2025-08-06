@@ -1,0 +1,18 @@
+{% extends "admin/challenges/create.html" %}
+
+{% block content %}
+{{ super() }}
+
+<div class="form-group">
+    <label for="predecessor_id">Predecessor Challenge</label>
+    <select class="form-control" id="predecessor_id" name="predecessor_id">
+        <option value="">None (Root Challenge)</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="max_lifetime">Max Lifetime (minutes)</label>
+    <input type="number" class="form-control" id="max_lifetime" name="max_lifetime" placeholder="Leave empty for no time limit">
+    <small class="form-text text-muted">Time limit for solving this challenge after predecessor is solved</small>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "challenges/challenge.html" %}
+
+{% block content %}
+{{ super() }}
+
+<div class="modal fade" id="solutionModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Solution Write-up</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="solution_description">Describe how you solved this challenge:</label>
+                    <textarea class="form-control" id="solution_description" rows="5" placeholder="Enter your solution methodology..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Skip</button>
+                <button type="button" class="btn btn-primary" id="submit_description">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="storyline_graph_container" style="height: 400px; width: 100%; border: 1px solid #ccc; margin-top: 20px;">
+    <!-- Graph visualization will be rendered here -->
+</div>
+{% endblock %}
